@@ -1,16 +1,22 @@
 <script>
- 	var guess, outputMessage;
-  var answer = 'twice';
   var keepPlaying = true;
 
-  while (keepPlaying) {
- 	 guess = prompt ('How many times has Austin been to Switzerland, once or twice or thrice?');
+	var game = function() {
+	 	var guess;
+  	var answer = 'twice';
+
+ 	 	guess = prompt ('How many times has Austin been to Switzerland, once or twice or thrice?');
 
 		if (guess.toLowerCase() === answer) {
  	 		alert('Yaaaaaas you got that right!');
- 	 		keepPlaying = false
-		} else {
-  		alert('Nope! Try again?')
-		};
+ 	 		keepPlaying = false;
+		}
+		else {
+ 			alert('Nope! Try again?');
+ 		};
+ 	}
+  while (keepPlaying) {
+		game();
+		keepPlaying = confirm ("Would you like to play again?");
 	}
 </script>
