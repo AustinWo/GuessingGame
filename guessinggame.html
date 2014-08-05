@@ -1,7 +1,7 @@
 <script>
   var keepPlaying = true;
 
-	var game = function() {
+	var game = function(){
 	 	var guess;
   	var answer = 'twice';
 
@@ -9,14 +9,17 @@
 
 		if (guess.toLowerCase() === answer) {
  	 		alert('Yaaaaaas you got that right!');
- 	 		keepPlaying = false;
+			keepPlaying = false;
 		}
 		else {
  			alert('Nope! Try again?');
  		};
  	}
+
   while (keepPlaying) {
 		game();
-		keepPlaying = confirm ("Would you like to play again?");
+		if (!keepPlaying) {
+			keepPlaying = confirm("Would you like to play agian?")
+		}
 	}
 </script>
